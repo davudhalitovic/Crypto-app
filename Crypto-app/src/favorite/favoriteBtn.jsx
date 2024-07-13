@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 function favoriteBtn(id) {
   const [favorites, setFavorites] = useState([]);
   if (favorites.includes(id)) {
