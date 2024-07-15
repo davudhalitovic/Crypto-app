@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from './componenets/navbar'
-import Home from './componenets/home'
-import Coins from './componenets/coins'
-import AboutUs from './componenets/aboutUs'
-import Login from './componenets/login'
+import Navbar from './router/navbar'
+import Home from './router/home'
+import Coins from './router/coins'
+import AboutUs from './router/aboutUs'
+import Login from './router/login'
 import { Route, Routes } from 'react-router-dom'
 function App() {
   
@@ -17,6 +17,7 @@ function App() {
     <Route path="/aboutUs" element={<AboutUs />}></Route>
     <Route path="/profile" element={<Login />}></Route>
    </Routes>
+   
     </>
   )
 }

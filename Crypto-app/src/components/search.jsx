@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Titles } from "./style.js";
+import { ContainerSearch, ContainerSearch, TitlesSearch } from "./style.js";
 import { Checkbox } from "@mui/material";
 import CalculateIcon from "@mui/icons-material/Calculate";
 import SearchInput from "./input.jsx";
@@ -38,7 +38,7 @@ function Search() {
 
   return (
     <>
-      <Container>
+      <ContainerSearch>
         {/* this div below contains the button -zergo */}
         <div>
           <SearchInput
@@ -48,7 +48,7 @@ function Search() {
         </div>
 
         <h1>Top 10 List</h1>
-        <Titles>
+        <TitlesSearch>
           <h3>Rank</h3>
           <h3>Name</h3>
           <h3>Price</h3>
@@ -56,7 +56,7 @@ function Search() {
           <h3>Market Cap</h3>
           <div></div>
           <div></div>
-        </Titles>
+        </TitlesSearch>
         {/* this is how to map through the data -zergo */}
         {filteredData.length > 0 ? (
           filteredData.map((item) => (
@@ -94,7 +94,7 @@ function Search() {
         ) : (
           <p>No results found</p>
         )}
-      </Container>
+      </ContainerSearch>
     </>
   );
 }

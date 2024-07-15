@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const Container = styled.div`
+export const ContainerSearch = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,7 +8,7 @@ export const Container = styled.div`
     padding: 7rem;
   
 `
-export const Titles = styled.div`
+export const TitlesSearch = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,7 +20,7 @@ export const Titles = styled.div`
         margin: 0 10px
     }
 `
-export const Wrapper = styled.div`
+export const WrapperSearch = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
