@@ -2,7 +2,6 @@ import {styled} from 'styled-components';
 
 export const Wrapper = styled.div`
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
 `;
 // Navigation bar
 export const NavigationBar = styled.nav`
