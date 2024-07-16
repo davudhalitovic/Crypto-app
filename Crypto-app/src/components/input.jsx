@@ -3,10 +3,10 @@ import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-
+import { ContainerSearch } from "./style.js";
 function SearchInput({ valueProp, onChangeProp }) {
   return (
-    <div>
+    <ContainerSearch>
       <Paper
         component="form"
         sx={{
@@ -15,14 +15,14 @@ function SearchInput({ valueProp, onChangeProp }) {
           p: "2px 2px",
           display: "flex",
           alignItems: "center",
-          width: 250,
+          width: 300,
         }}
       >
         <IconButton
           type="button"
           sx={{ p: "10px" }}
           aria-label="search"
-          style={{ color: "#B3BAC6" }}
+          style={{ color: "#B3BAC6", boxShadow: "none", marginBottom: "-5px" }}
         >
           <SearchIcon />
         </IconButton>
@@ -35,7 +35,7 @@ function SearchInput({ valueProp, onChangeProp }) {
           onChange={onChangeProp}
         />
       </Paper>
-    </div>
+    </ContainerSearch>
   );
 }
 
