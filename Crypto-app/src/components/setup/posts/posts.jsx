@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Checkbox } from "@mui/material";
 import CalculateIcon from "@mui/icons-material/Calculate";
 import "./posts.css";
+import { Calculator, CoinInfo, ExitDiv, InputCalc, InputDiv, Overlay } from "../cryptos.styled";
 
 function Posts({ Post }) {
+  const[calculator, setCalculator] = useState(false)
+  const[selectedCoin, setSelectedCoin] = useState(null)
+  const[coinQuantity, setCoinQuantity] = useState(0)
+
+  const handleCaculator = (item) => {
+    setSelectedCoin(item)
+    setCalculator(!calculator)
+  }
   return (
     <div style={{ width: "100%", padding: "1rem" }}>
       {Post
@@ -37,13 +46,34 @@ function Posts({ Post }) {
                   <Checkbox />
                 </div>
                 <div>
-                  <CalculateIcon className="calc" />
+                  <CalculateIcon className="calc" onClick={() => handleCaculator(item)}/>
                 </div>
                 <hr />
               </div>
             );
           })
         : null}
+
+      {calculator && 
+      <Calculator>
+        <Overlay>
+          <ExitDiv>
+            <p onClick={() => setCalculator(false)}>X</p>
+          </ExitDiv>
+          <CoinInfo>
+            <p>{selectedCoin.name}</p>
+            <img src={selectedCoin.image} alt="" />
+          </CoinInfo>
+          <InputDiv>
+          <InputCalc type="number" value={coinQuantity} onChange={(e) => setCoinQuantity(e.target.value)} />
+          <p>X</p>
+          <InputCalc type="text" readOnly value={selectedCoin.current_price} />
+          <p>=</p>
+          <InputCalc type="text" readOnly value={selectedCoin.current_price * coinQuantity}  />
+          </InputDiv>
+        </Overlay>
+      </Calculator>
+      }
     </div>
   );
 }

@@ -14,7 +14,6 @@ import {
   ButtonImage,
 } from "./design.styled";
 import UserLogo from "./images/user.png";
-import Footer from "./footer";
 import "./style.css";
 const Navbar = () => {
   return (
