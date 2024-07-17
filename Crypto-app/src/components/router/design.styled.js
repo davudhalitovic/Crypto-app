@@ -152,10 +152,17 @@ export const ImageHolder = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  width: 100%;
+  width: 80%;
   height: 400px;
+  border-radius: 20px;
 `;
 
 export const ImageTwo = styled.img`
   width: 100%;
+`;
+
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

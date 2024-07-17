@@ -1,45 +1,26 @@
 import React from "react";
-import Paper from "@mui/material/Paper";
-import InputBase from "@mui/material/InputBase";
-import IconButton from "@mui/material/IconButton";
-import SearchIcon from "@mui/icons-material/Search";
-import { ContainerSearch } from "./style.js";
-function SearchInput({ valueProp, onChangeProp }) {
+import "./coinModal.css";
+
+function CoinModal({ open, onClose, coin }) {
+  if (!open || !coin) return null;
+
   return (
-    <ContainerSearch>
-      <Paper
-        component="form"
-        sx={{
-          borderRadius: "20px",
-          backgroundColor: "#374151",
-          p: "2px 2px",
-          display: "flex",
-          alignItems: "center",
-          width: 300,
-        }}
-      >
-        <IconButton
-          type="button"
-          sx={{ p: "10px" }}
-          aria-label="search"
-          style={{ color: "#B3BAC6", boxShadow: "none", marginBottom: "-5px" }}
-        >
-          <SearchIcon />
-        </IconButton>
-        <InputBase
-          style={{ color: "white" }}
-          sx={{ ml: 1, flex: 1 }}
-          placeholder="Search Crypto"
-          inputProps={{ "aria-label": "search Crypto" }}
-          value={valueProp}
-          onChange={onChangeProp}
-        />
-      </Paper>
-    </ContainerSearch>
+    <div className="modal">
+      <div className="modal-content">
+        <span className="close" onClick={onClose}>&times;</span>
+        <div>
+          <img src={coin.image} alt={coin.name} />
+          <h2>{coin.name}</h2>
+          <p>Price: ${parseFloat(coin.current_price).toFixed(2)}</p>
+          <p>Market Cap: ${parseFloat(coin.market_cap).toFixed(2)}</p>
+          <p>Total Volume: ${parseFloat(coin.total_volume).toFixed(2)}</p>
+        </div>
+      </div>
+    </div>
   );
 }
 
-export default SearchInput;
+export default CoinModal;
 
 // @@@@@@@@@@@..@@@@@@@@@@@@  %@@@@@@@@@@@=    +@@@@@@@@@@    %@@@@@@@@#          
 // @@@@@@@@@@@..@@@@@@@@@@@@  %@@@@@@@@@@@@    @@@@@@@@@@@   =@@@@@@@@@@-         
@@ -55,4 +36,3 @@ export default SearchInput;
 // #@@@@@@@@@@@..@@@@@@@@@@@@: %@@@@@@=:@@@@@@+:@@@@@@@@@@@   *@@@@@@@@@@+         
 // #@@@@@@@@@@@..@@@@@@@@@@@@: %@@@@@@= @@@@@@- @@@@@@@@@@@   -@@@@@@@@@@.         
 // %@@@@@@@@@@@..@@@@@@@@@@@@: %@@@@@@= =@@@@#  =@@@@@@**@@    *@@@@@@@@-          
-
