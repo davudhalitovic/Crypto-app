@@ -17,7 +17,7 @@ function Crypto() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+        "https://corsproxy.io/?https%3A%2F%2Fapi.coingecko.com%2Fapi%2Fv3%2Fcoins%2Fmarkets%3Fvs_currency%3Dusd%26order%3Dmarket_cap_desc%26per_page%3D100%26page%3D1%26sparkline%3Dfalse"
       );
       setData(response.data);
       console.log(response.data);
@@ -44,7 +44,6 @@ function Crypto() {
     setCurrentPage(1); // Reset to first page on new search
   };
 
-  // Get current posts for filtered data
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPost = filteredData.slice(indexOfFirstPost, indexOfLastPost);
