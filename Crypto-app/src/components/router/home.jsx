@@ -11,7 +11,6 @@ const Home = () => {
         <ImageTwo src={CryptoBack} alt="" />
       </ImageHolder>
     </Center>
-
     <Crypto />
     </>
   );

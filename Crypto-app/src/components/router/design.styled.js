@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 export const NavigationBar = styled.nav`
   background-color: #22364f;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   color: #fff;
   height: 80px;
@@ -17,6 +17,7 @@ export const NavigationLogo = styled.div`
   display: flex;
   align-items: center;
   margin-left: 15px;
+  width: 300px;
 `;
 
 export const Image = styled.img`
@@ -35,13 +36,16 @@ export const NavigationMenuWrapper = styled.div`
   padding: 10px;
   border-radius: 10px;
   margin-right: 10px;
-  width: 450px;
   background-color: #132743;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
 `;
 
 export const NavigationMenu = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0;
@@ -77,6 +81,7 @@ export const ButtonImage = styled.img`
   margin-right: 15px;
   box-shadow: 0;
   background-color: transparent;
+  margin-left: 13rem;
   &:hover {
     transform: scale(1.07);
     transition: all 300ms ease;

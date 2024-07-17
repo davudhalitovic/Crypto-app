@@ -56,7 +56,7 @@ function Crypto() {
 
       <div style={{ padding: "1rem" }}>
         <Container>
-          <h1>Top 10 List</h1>
+          <h1>Top 100 Cryptocurrencies</h1>
           <Titles>
             <Card>
               <p>Rank</p>

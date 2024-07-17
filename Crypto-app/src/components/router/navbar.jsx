@@ -35,14 +35,14 @@ const Navbar = () => {
                 <NavLink to="/coins">Coins</NavLink>
               </Li>
               <Li>
-                <NavLink to="/aboutUs">About Us</NavLink>
+                <NavLink to="/aboutUs">About</NavLink>
               </Li>
               <NavLink to="/favorites">
                 <FavoriteBorderIcon />
               </NavLink>
             </NavigationMenu>
           </NavigationMenuWrapper>
-          <div>
+          <div style={{width: "300px"}}>
             <Link to="/profile">
               <ButtonImage src={UserLogo} alt="logo" />
             </Link>
