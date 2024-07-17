@@ -3,7 +3,7 @@ import { Card, Container, Titles } from "./cryptos.styled";
 import axios from "axios";
 import Posts from "./posts/posts.jsx";
 import Pagination from "./pagination/paginaiton.jsx";
-import Input from "../input.jsx";
+import Input from "../search/input.jsx";
 
 function Crypto() {
   const [data, setData] = useState([]);
