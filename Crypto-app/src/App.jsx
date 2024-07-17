@@ -1,12 +1,13 @@
 import React from "react";
-import Navbar from "./Components/router/navbar.jsx";
-import Home from "./Components/router/home.jsx";
-import Coins from "./Components/router/coins.jsx";
-import AboutUs from "./Components/router/aboutUs.jsx";
-import Login from "./Components/router/login.jsx";
+import Navbar from "./components/router/navbar.jsx";
+import Home from "./components/router/home.jsx";
+import Coins from "./components/router/coins.jsx";
+import AboutUs from "./components/router/aboutUs.jsx";
+import Login from "./components/router/login.jsx";
 import { Route, Routes } from "react-router-dom";
-import Crypto from "./Components/setup/crypto.jsx";
-import Footer from "./Components/router/footer.jsx";
+import Crypto from "./components/setup/crypto.jsx";
+import Footer from "./components/router/footer.jsx";
+
 import "./App.css";
 function App() {
   return (
