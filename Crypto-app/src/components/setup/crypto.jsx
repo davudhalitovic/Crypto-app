@@ -44,7 +44,6 @@ function Crypto() {
     setCurrentPage(1); // Reset to first page on new search
   };
 
-
   // Get current posts for filtered data
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
