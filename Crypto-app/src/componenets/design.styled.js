@@ -148,3 +148,65 @@ export const FooterParagraph = styled.p`
       text-align: center;
     }
 `
+// About us
+export const AboutUsWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+    font-family: 'Roboto', sans-serif;
+`
+export const Card = styled.div`
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    width: 250px;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 15px;
+    margin: 25px;
+    &:hover {
+        transform: scale(1.08);
+        transition: all 300ms ease;
+        cursor: pointer;
+    }
+    h1{
+      color: black;
+      font-size: 25px;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+    }
+    h4{
+      color: gray;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+    }
+    p{
+      color: gray;
+      font-size: 15px;
+      font-weight: normal;
+      font-family: 'Roboto', sans-serif;
+      margin-top: 20px;
+    }
+`
+export const AboutUsLogo = styled.img`
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+`
+export const AvatarLogo  = styled.img`
+    height: 80px;
+    width: 80px;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+`
