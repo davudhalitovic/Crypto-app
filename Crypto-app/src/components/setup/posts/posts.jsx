@@ -50,6 +50,7 @@ function Posts({ Post }) {
                   <p>{item.market_cap_rank}</p>
 
                   <img
+                     style={{ cursor: "pointer" }}
                     src={item.image}
                     alt={item.name}
                     onClick={() => handleCoinClick(item)}
