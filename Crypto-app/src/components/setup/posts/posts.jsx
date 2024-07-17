@@ -11,6 +11,7 @@ import {
   InputDiv,
   Overlay,
 } from "../cryptos.styled";
+import FavoriteButton from "../../favorite/FavoriteButton";
 
 function Posts({ Post }) {
   const [calculator, setCalculator] = useState(false);
@@ -50,7 +51,7 @@ function Posts({ Post }) {
                   <p>{item.market_cap_rank}</p>
 
                   <img
-                     style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer" }}
                     src={item.image}
                     alt={item.name}
                     onClick={() => handleCoinClick(item)}
@@ -69,7 +70,7 @@ function Posts({ Post }) {
                   <p>${parseFloat(item.market_cap).toFixed(2)}</p>
                 </div>
                 <div>
-                  <Checkbox />
+                  <FavoriteButton itemId={item.id} />
                 </div>
                 <div>
                   <CalculateIcon

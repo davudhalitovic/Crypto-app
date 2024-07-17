@@ -15,6 +15,8 @@ import {
 } from "./design.styled";
 import UserLogo from "./images/user.png";
 import "./style.css";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+
 const Navbar = () => {
   return (
     <>
@@ -35,12 +37,15 @@ const Navbar = () => {
               <Li>
                 <NavLink to="/aboutUs">About Us</NavLink>
               </Li>
+              <NavLink to="/favorites">
+                <FavoriteBorderIcon />
+              </NavLink>
             </NavigationMenu>
           </NavigationMenuWrapper>
           <div>
-              <Link to="/profile">
-                <ButtonImage src={UserLogo} alt="logo" />
-              </Link>
+            <Link to="/profile">
+              <ButtonImage src={UserLogo} alt="logo" />
+            </Link>
           </div>
         </NavigationBar>
       </Wrapper>
