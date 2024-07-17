@@ -1,4 +1,3 @@
-//Managing the states of favorite items
 import React, { createContext, useState } from "react";
 
 export const FavoriteContext = createContext();
@@ -12,6 +11,7 @@ export const FavoriteProvider = ({ children }) => {
         ? prevFavorites.filter((id) => id !== itemId)
         : [...prevFavorites, itemId]
     );
+    console.log("Updated Favorites:", favorites); // Added logging for debugging
   };
 
   return (
