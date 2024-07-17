@@ -38,11 +38,9 @@ const Navbar = () => {
             </NavigationMenu>
           </NavigationMenuWrapper>
           <div>
-            <Button>
               <Link to="/profile">
                 <ButtonImage src={UserLogo} alt="logo" />
               </Link>
-            </Button>
           </div>
         </NavigationBar>
       </Wrapper>

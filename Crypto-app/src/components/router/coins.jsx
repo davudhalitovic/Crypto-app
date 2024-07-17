@@ -1,9 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Crypto from "../setup/crypto.jsx";
 const Coins = () => {
     return (
         <div>
-            <h1>Coins</h1>
+            <Crypto />
         </div>
     )
 }
