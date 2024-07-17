@@ -5,7 +5,6 @@ import Coins from "./Components/router/coins.jsx";
 import AboutUs from "./Components/router/aboutUs.jsx";
 import Login from "./Components/router/login.jsx";
 import { Route, Routes } from "react-router-dom";
-import Crypto from "./Components/setup/crypto.jsx";
 import Footer from "./Components/router/footer.jsx";
 
 import "./App.css";
@@ -19,8 +18,6 @@ function App() {
         <Route path="/aboutUs" element={<AboutUs />}></Route>
         <Route path="/profile" element={<Login />}></Route>
       </Routes>
-
-      <Crypto />
       <Footer />
     </>
   );

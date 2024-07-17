@@ -16,6 +16,7 @@ function SearchInput({ valueProp, onChangeProp }) {
           display: "flex",
           alignItems: "center",
           width: 300,
+          marginTop: "1rem",
         }}
       >
         <IconButton
@@ -27,7 +28,7 @@ function SearchInput({ valueProp, onChangeProp }) {
           <SearchIcon />
         </IconButton>
         <InputBase
-          style={{ color: "white" }}
+          style={{ color: "white"}}
           sx={{ ml: 1, flex: 1 }}
           placeholder="Search Crypto"
           inputProps={{ "aria-label": "search Crypto" }}
